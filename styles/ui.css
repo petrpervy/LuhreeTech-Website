@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  html,body{ 
+    @apply bg-gradient-to-br from-slate-50 via-white to-blue-50 text-ink antialiased;
+    background-attachment: fixed;
+  }
+}
+
+@layer components{
+  /* Layout Primitives */
+  .Container{ @apply mx-auto w-full max-w-[1140px] px-5 md:px-6; }
+  .Section{ @apply py-16 md:py-24; }
+  
+  /* Glass System */
+  .glass{
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    @apply backdrop-blur-md rounded-[var(--radius-glass)] shadow-[var(--shadow-glass)];
+  }
+  
+  .glass-strong{
+    background: var(--glass-bg-strong);
+    border: 1px solid var(--glass-border);
+    @apply backdrop-blur-lg rounded-[var(--radius-glass)] shadow-[var(--shadow-glass)];
+  }
+  
+  .bg-glass{
+    background: var(--grad-glass);
+    @apply backdrop-blur-sm;
+  }
+  
+  /* Gradient Backgrounds */
+  .bg-hero{
+    background: var(--grad-hero);
+  }
+  
+  .bg-brand{
+    background: var(--grad-primary);
+  }
+  
+  /* Cards - unified glass styling */
+  .card{
+    @apply bg-glass glass-border shadow-glass rounded-[1.25rem] p-6 transition-all duration-300;
+    border: 1px solid rgba(255,255,255,.28);
+  }
+  
+  .card:hover{
+    @apply shadow-glow;
+    transform: translateY(-4px);
+  }
+  
+  .card-hover{
+    @apply hover:-translate-y-1 hover:shadow-glow;
+  }
+  
+  /* Buttons */
+  .btn{
+    @apply inline-flex items-center justify-center rounded-[var(--radius-button)] px-6 py-3 font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2;
+  }
+  
+  .btn-primary{
+    background: var(--brand-cta);
+    color: white;
+    box-shadow: var(--shadow-cta);
+    @apply hover:shadow-[var(--shadow-cta-hover)] hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary{
+    background: var(--glass-bg);
+    border: 1px solid var(--brand-teal);
+    color: var(--brand-teal);
+    @apply backdrop-blur-md hover:bg-brand-teal hover:bg-opacity-10 hover:-translate-y-0.5;
+  }
+  
+  .btn-ghost{
+    background: var(--glass-bg);
+    color: var(--ink);
+    @apply backdrop-blur-md hover:bg-opacity-50 hover:-translate-y-0.5;
+  }
+  
+  /* Typography - normalized rhythm */
+  .heading-1{
+    @apply text-5xl md:text-6xl font-bold text-ink leading-tight;
+  }
+  
+  .heading-2{
+    @apply text-3xl md:text-4xl font-bold text-ink leading-tight;
+  }
+  
+  .heading-3{
+    @apply text-xl md:text-2xl font-semibold text-ink;
+  }
+  
+  .body-text{
+    @apply text-base md:text-lg leading-relaxed;
+    color: rgba(12, 19, 32, 0.85);
+  }
+  
+  .muted-text{
+    @apply text-sm text-muted;
+  }
+  
+  /* Typography spacing rhythm */
+  .section-heading{
+    @apply mb-3;
+  }
+  
+  .section-subcopy{
+    @apply mb-8;
+  }
+  
+  /* Links */
+  .link{
+    @apply text-brand-teal hover:text-brand-cta transition-colors duration-200 underline-offset-4 hover:underline;
+  }
+  
+  /* Form Elements */
+  .input{
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    @apply backdrop-blur-md rounded-[var(--radius-button)] px-4 py-3 w-full placeholder-muted focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-offset-2 transition-all duration-200;
+  }
+  
+  /* Badges & Chips */
+  .badge{
+    background: var(--glass-bg);
+    @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm backdrop-blur-md;
+  }
+  
+  .chip{
+    background: var(--glass-bg-strong);
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs backdrop-blur-md border border-white border-opacity-20;
+  }
+  
+  /* Industry link chips - tappable glass style */
+  .industry-chip{
+    @apply inline-flex items-center rounded-pill bg-glass glass-border px-4 py-2 hover:text-ink hover:bg-white/15 hover:shadow-glow transition-all duration-200;
+    color: rgba(12, 19, 32, 0.8);
+  }
+  
+  /* Navigation */
+  .nav-link{
+    @apply text-muted hover:text-ink transition-colors duration-200 relative;
+  }
+  
+  .nav-link::after{
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-brand-teal to-brand-cta transition-all duration-300;
+  }
+  
+  .nav-link:hover::after{
+    @apply w-full;
+  }
+  
+  /* Animations */
+  .animate-float{
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-shimmer{
+    animation: shimmer 2s linear infinite;
+  }
+  
+  @keyframes float{
+    0%, 100%{ transform: translateY(0px); }
+    50%{ transform: translateY(-6px); }
+  }
+  
+  @keyframes shimmer{
+    0%{ background-position: -200% 0; }
+    100%{ background-position: 200% 0; }
+  }
+}

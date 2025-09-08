@@ -1,0 +1,130 @@
+brand:
+  name: "Luhreetech"
+  audience: ["U.S. small businesses", "agencies", "law firms", "clinics", "contractors", "retail"]
+  voice: ["direct", "simple", "no fluff"]
+  avoid_words: ["cutting edge", "robust", "seamless", "leverage", "paradigm", "synergy"]
+nav:
+  - label: Home
+    slug: /
+  - label: Features
+    slug: /features
+  - label: Pricing
+    slug: /pricing
+  - label: Case Studies
+    slug: /case-studies
+  - label: About
+    slug: /about
+  - label: Contact
+    slug: /contact
+  - label: Privacy
+    slug: /privacy
+pages:
+  home:
+    hero:
+      headline: "AI automations done for you, end-to-end."
+      subhead: "We give small businesses a reliable digital employee — handling tasks, calls, and workflows without adding headcount."
+      primary_cta: {label: "Start Your Free Audit", to: "/contact?type=audit"}
+      secondary_cta: {label: "Book a 20-min Build Consult", to: "/contact?type=consult"}
+    sections:
+      - name: "How it helps"
+        purpose: "Explain clear outcomes."
+        bullets:
+          - { title: "Save 10–40+ hours per week", desc: "Never miss a lead or customer inquiry." }
+          - { title: "Cut admin costs", desc: "Without sacrificing professionalism." }
+          - { title: "Focus on your business", desc: "We handle the digital work." }
+      - name: "Testimonials"
+        purpose: "Social proof."
+        bullets:
+          - "\"Saved 12 hours weekly on appointments.\" — Dental Clinic Owner"
+          - "\"30+ new leads per week.\" — Marketing Agency"
+          - "\"90% fewer data entry errors.\" — Logistics Firm"
+  features:
+    groups:
+      - title: "Free Audit & Discovery"
+        bullets: ["Identify automation opportunities", "Map your current processes", "Find quick wins first"]
+      - title: "Build & Deploy"
+        bullets: ["Custom integrations and scripts", "Demo automation for approval", "Seamless deployment"]
+      - title: "AI Digital Employee"
+        bullets: ["Handles tasks and workflows", "Human-in-the-loop controls", "Professional communication"]
+      - title: "Ongoing Support"
+        bullets: ["24/7 monitoring and alerts", "Quick fixes and improvements", "Monthly performance reviews"]
+  pricing:
+    plans:
+      - name: Starter Automations
+        price: "$500–1,000/mo"
+        for: "1–2 tasks like email sending, receptionist, or lead scraping"
+        features: ["Email automation", "Basic receptionist", "Lead scraping", "Email support", "Monthly monitoring"]
+      - name: Growth Ops
+        price: "$1,500–2,500/mo"
+        for: "3–6 automations; customer comms + back-office workflows"
+        features: ["Multiple workflows", "CRM integration", "Priority support", "Weekly improvements", "KPI tracking"]
+      - name: AI Employee
+        price: "$3,000–5,000/mo"
+        for: "Full digital employee: 7+ automations, receptionist, lead gen"
+        features: ["Complete digital employee", "All integrations", "Dedicated support", "Custom development", "On-prem options"]
+    faqs:
+      - { q: "How fast is setup?", a: "Free audit in 24 hours, first automation live in 1-2 weeks." }
+      - { q: "Do you work with our tools?", a: "Yes. Gmail, Google Calendar, HubSpot, CRMs, and custom APIs." }
+      - { q: "Who maintains the automations?", a: "We do. 24/7 monitoring, quick fixes, and monthly improvements included." }
+      - { q: "Can we start small?", a: "Yes. We begin with one high-ROI task and scale from there." }
+      - { q: "What about data privacy?", a: "Least-privilege access, clear audit trails, and on-prem options available." }
+      - { q: "What if it doesn't work?", a: "Free audit + pay only after demo approval. Cancel anytime." }
+    guarantees: ["Free audit", "Pay after demo approval", "Cancel anytime"]
+  case_studies:
+    items:
+      - slug: "dental-appointment-automation"
+        client: "Dental Clinic"
+        niche: "Healthcare"
+        problem: "Staff spent hours on appointment reminders and scheduling"
+        solution: "AI receptionist integrated with Google Calendar and patient database"
+        stack: ["Google Calendar", "Patient Database", "SMS/Email"]
+        results: [{metric: "hours_saved_week", value: "12"}, {metric: "no_show_rate", value: "-25%"}]
+        quote: "\"We finally have time to focus on patient care.\""
+      - slug: "marketing-agency-lead-gen"
+        client: "Marketing Agency"
+        niche: "B2B Services"
+        problem: "Manual LinkedIn scraping and slow follow-up sequences"
+        solution: "Automated prospect research and personalized email sequences"
+        stack: ["LinkedIn API", "HubSpot", "Email Automation"]
+        results: [{metric: "leads_per_week", value: "30+"}, {metric: "new_clients", value: "2 in 30 days"}]
+        quote: "\"Our pipeline is now consistently full.\""
+      - slug: "logistics-document-handling"
+        client: "Logistics Firm"
+        niche: "Transportation"
+        problem: "Staff manually retyped shipment orders from paper forms"
+        solution: "OCR scanning and automated database entry with validation"
+        stack: ["OCR API", "Database", "Validation Rules"]
+        results: [{metric: "error_reduction", value: "90%"}, {metric: "hours_saved_week", value: "15"}]
+        quote: "\"The system handles everything while we sleep.\""
+    detail_template:
+      slug: "example"
+      title: "[DRAFT] Outcome-focused automation"
+      summary: "[DRAFT] Short summary of the client and win."
+      sections:
+        - heading: "Problem"
+          bullets: ["[DRAFT] Describe the pain clearly"]
+        - heading: "Solution"
+          bullets: ["[DRAFT] Steps taken and systems involved"]
+        - heading: "Results"
+          bullets: ["[DRAFT] Numbers and outcomes"]
+  about:
+    mission: "Every small business should have an AI-powered employee to handle the work no one wants to do."
+    principles: ["Ship value weekly", "Prove outcomes", "Keep humans in control", "Prefer simple", "Document everything"]
+    founder_quote: "I started Luhreetech because small businesses deserve access to the same AI leverage as big companies — without the complexity."
+    team:
+      - { name: "Founder", role: "Founder & Lead", bio: "Currently founder-led, with a network of technical partners." }
+  contact:
+    form_fields: [name, email, company, size, goal, message]
+    validation: { name: required, email: "required|email", message: "required|min:20" }
+    success_message: "Thanks! We'll reply within 24 hours with your free audit."
+    handler: local-json
+  privacy:
+    policy_source: "[DRAFT] Provide a link or paste policy text."
+seo:
+  home: { title: "Luhreetech - AI Automations Done For You", description: "We give small businesses a reliable digital employee — handling tasks, calls, and workflows without adding headcount.", keywords: ["ai automation", "small business automation", "digital employee"] }
+  features: { title: "Features - Luhreetech", description: "Free audit, custom build, AI digital employee, and ongoing support for small businesses.", keywords: ["automation features", "ai employee", "business automation"] }
+  pricing: { title: "Pricing - Luhreetech", description: "Starter automations from $500/mo, Growth ops $1,500/mo, Full AI employee $3,000/mo.", keywords: ["automation pricing", "ai pricing", "small business pricing"] }
+  case_studies: { title: "Case Studies - Luhreetech", description: "Real results: 12+ hours saved weekly, 30+ leads per week, 90% error reduction.", keywords: ["automation case studies", "ai results", "business outcomes"] }
+  about: { title: "About - Luhreetech", description: "Every small business should have an AI-powered employee to handle the work no one wants to do.", keywords: ["about luhreetech", "ai automation company", "small business ai"] }
+  contact: { title: "Contact - Luhreetech", description: "Start your free audit. Book a 20-minute build consult. Get your AI digital employee.", keywords: ["contact", "free audit", "ai consultation"] }
+  privacy: { title: "Privacy - Luhreetech", description: "How we handle your data with least-privilege access and clear audit trails.", keywords: ["privacy policy", "data security", "ai privacy"] }

@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Page gradient background */
+html, body { height: 100%; }
+body {
+  @apply text-[17px] text-body antialiased;
+  background: radial-gradient(1400px 800px at 20% -10%, theme(colors.pageBlue) 0%, #F7FAFF 45%, #FFFFFF 60%) , radial-gradient(1200px 700px at 110% 10%, theme(colors.pagePeach) 0%, #FFFFFF 55%);
+}
+
+/* Liquid-glass helpers */
+@layer utilities {
+.glass {
+    background: theme(colors.cardBg);
+    @apply rounded-xl2 shadow-glass backdrop-blur-xl border border-glassBorder;
+    box-shadow: var(--tw-shadow), inset 0 1px 0 rgba(255,255,255,0.65), inset 0 0 0 1px rgba(12,19,32,0.06);
+  }
+  .glass-deep {
+    background: theme(colors.cardBgDeep);
+    @apply rounded-xl3 shadow-glass backdrop-blur-2xl border border-glassBorder;
+    box-shadow: var(--tw-shadow), inset 0 1px 0 rgba(255,255,255,0.55), inset 0 0 0 1px rgba(12,19,32,0.08);
+  }
+  .hover-lift { @apply transition-transform duration-150 will-change-transform; }
+  .hover-lift:hover { transform: translateY(-2px); box-shadow: 0 18px 44px rgba(18,26,40,0.14); }
+  .btn { @apply inline-flex items-center gap-2 px-5 py-3 rounded-full font-medium; }
+  .btn-cta { @apply btn text-white bg-cta hover:opacity-95 shadow-[0_8px_24px_rgba(255,159,62,0.35)]; }
+  .btn-outline { @apply btn border border-glassBorder bg-white/70 hover:bg-white; }
+  .nav-link { @apply text-[15px] text-mute hover:text-ink transition-colors; }
+  .badge { @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 border border-glassBorder text-[13px] text-mute shadow-insetTop backdrop-blur; }
+  .tiny-divider { @apply h-px bg-[rgba(12,19,32,0.06)]; }
+  .card-title { @apply text-[15px] font-semibold text-ink; }
+  .metric { @apply text-[13px] text-mute; }
+}
+
+/* Accessible focus */
+*:focus-visible { outline: 3px solid rgba(255,159,62,0.6); outline-offset: 2px; }
+
+/* Headings */
+.h1 { @apply text-display font-semibold text-ink tracking-[-0.02em]; }
+.h2 { @apply text-h2 font-semibold text-ink; }
+.h3 { @apply text-h3 font-semibold text-ink; }
+
+/* Liquid Glass Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glassPulse {
+  0%, 100% {
+    box-shadow:
+      0 10px 30px rgba(18,26,40,0.08),
+      inset 0 1px 0 rgba(255,255,255,0.65),
+      inset 0 0 0 1px rgba(12,19,32,0.06);
+  }
+  50% {
+    box-shadow:
+      0 16px 40px rgba(18,26,40,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.75),
+      inset 0 0 0 1px rgba(12,19,32,0.08);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes waveFlow {
+  0%, 100% { transform: translateX(0) scaleY(1); opacity: 0.1; }
+  25% { transform: translateX(20px) scaleY(1.2); opacity: 0.3; }
+  50% { transform: translateX(40px) scaleY(0.8); opacity: 0.2; }
+  75% { transform: translateX(20px) scaleY(1.1); opacity: 0.25; }
+}
+
+/* Enhanced Liquid Glass Utilities */
+.glass-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.glass-pulse {
+  animation: glassPulse 4s ease-in-out infinite;
+}
+
+.glass-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255,255,255,0.3) 50%,
+    transparent 100%);
+  animation: shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Glass gradient overlays */
+.glass-gradient {
+  background: linear-gradient(135deg, 
+    rgba(255,255,255,0.1) 0%, 
+    rgba(255,255,255,0.05) 25%,
+    rgba(255,255,255,0.1) 50%,
+    rgba(255,255,255,0.05) 75%,
+    rgba(255,255,255,0.1) 100%);
+}
+
+/* Liquid glass depth effects */
+.glass-depth-1 {
+  box-shadow: 
+    0 10px 30px rgba(18,26,40,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    inset 0 0 0 1px rgba(12,19,32,0.06);
+}
+
+.glass-depth-2 {
+  box-shadow: 
+    0 16px 40px rgba(18,26,40,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.7),
+    inset 0 0 0 1px rgba(12,19,32,0.08);
+}
+
+.glass-depth-3 {
+  box-shadow: 
+    0 20px 50px rgba(18,26,40,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 0 0 1px rgba(12,19,32,0.1);
+}

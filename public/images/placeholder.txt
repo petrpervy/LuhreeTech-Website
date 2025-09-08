@@ -1,0 +1,6 @@
+Add royalty-free images here. Current case study cards use:
+- /images/case-support.jpg
+- /images/case-sales.jpg
+- /images/case-ops.jpg
+
+

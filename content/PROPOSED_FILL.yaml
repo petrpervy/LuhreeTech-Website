@@ -1,0 +1,129 @@
+brand:
+  audience: []
+  voice: ["direct", "practical", "friendly"]
+  avoid_words: ["cutting edge", "robust", "seamless", "leverage", "paradigm", "synergy"]
+nav:
+  - label: Home
+    slug: /
+  - label: Features
+    slug: /features
+  - label: Pricing
+    slug: /pricing
+  - label: Case Studies
+    slug: /case-studies
+  - label: About
+    slug: /about
+  - label: Contact
+    slug: /contact
+  - label: Privacy
+    slug: /privacy
+pages:
+  home:
+    hero:
+      headline: "[DRAFT] Hire AI that actually works"
+      subhead: "[DRAFT] We automate repetitive work so your team moves faster."
+      primary_cta: {label: "[DRAFT] Try it", to: "/contact?type=brief"}
+      secondary_cta: {label: "[DRAFT] Get started", to: "/pricing"}
+    sections:
+      - name: "How it helps"
+        purpose: "[DRAFT] Explain clear outcomes."
+        bullets:
+          - { title: "[DRAFT] Save 20+ hours weekly", desc: "[DRAFT] Remove repetitive steps across tools." }
+          - { title: "[DRAFT] Fewer handoffs", desc: "[DRAFT] Agents follow your process with guardrails." }
+          - { title: "[DRAFT] Ship faster", desc: "[DRAFT] Small weekly improvements stack up." }
+      - name: "Testimonials"
+        purpose: "[DRAFT] Social proof."
+        bullets:
+          - "[DRAFT] \"Cut response time in half.\" — Alex, COO"
+          - "[DRAFT] \"Booked 30% more calls.\" — Maya, Head of Ops"
+          - "[DRAFT] \"Reporting runs itself now.\" — Jamal, Founder"
+  features:
+    groups:
+      - title: "[DRAFT] Intake & Discovery"
+        bullets: ["[DRAFT] Map process in 60 minutes", "[DRAFT] Identify quick wins first", "[DRAFT] Align success metrics early"]
+      - title: "[DRAFT] Automation Build"
+        bullets: ["[DRAFT] Integrations and scripts", "[DRAFT] Tests and logging", "[DRAFT] Clear docs for handoff"]
+      - title: "[DRAFT] AI Employees"
+        bullets: ["[DRAFT] Roles, KPIs, and guardrails", "[DRAFT] Human-in-the-loop controls", "[DRAFT] Performance reviews monthly"]
+      - title: "[DRAFT] Support & Care"
+        bullets: ["[DRAFT] Monitoring and alerts", "[DRAFT] Weekly improvements", "[DRAFT] Team training on changes"]
+  pricing:
+    plans:
+      - name: Starter
+        price: "[DRAFT] $2k/mo"
+        for: "[DRAFT] Teams starting automation"
+        features: ["[DRAFT] Two workflows automated", "[DRAFT] Email support", "[DRAFT] Quick wins first", "[DRAFT] Basic dashboards", "[DRAFT] Docs and training"]
+      - name: Growth
+        price: "[DRAFT] $5k/mo"
+        for: "[DRAFT] Teams scaling automation"
+        features: ["[DRAFT] Five workflows automated", "[DRAFT] Agent upkeep", "[DRAFT] Weekly improvements", "[DRAFT] Priority support", "[DRAFT] KPI reviews"]
+      - name: Custom
+        price: "[DRAFT] Contact"
+        for: "[DRAFT] Complex or regulated needs"
+        features: ["[DRAFT] Deep systems work", "[DRAFT] On-site workshops", "[DRAFT] SLA options", "[DRAFT] Security reviews", "[DRAFT] Dedicated support"]
+    faqs:
+      - { q: "[DRAFT] How fast is onboarding?", a: "[DRAFT] First wins in 1–2 weeks for most teams." }
+      - { q: "[DRAFT] Do you work with our stack?", a: "[DRAFT] Yes. We connect to your tools and data sources." }
+      - { q: "[DRAFT] Who maintains agents?", a: "[DRAFT] We do, with weekly checks and improvements." }
+      - { q: "[DRAFT] Can we start small?", a: "[DRAFT] Yes. We begin with one high-ROI workflow." }
+      - { q: "[DRAFT] What about data privacy?", a: "[DRAFT] Least-privilege access and clear audit trails." }
+      - { q: "[DRAFT] What if it doesn’t fit?", a: "[DRAFT] You can cancel anytime before the next month." }
+    guarantees: ["[DRAFT] Cancel anytime", "[DRAFT] Clear deliverables before start"]
+  case_studies:
+    items:
+      - slug: "support-automation"
+        client: "[DRAFT] Retail brand"
+        niche: "[DRAFT] Ecommerce"
+        problem: "[DRAFT] Slow ticket triage and reporting"
+        solution: "[DRAFT] Auto-tagging, macro suggestions, weekly CSAT report"
+        stack: ["[DRAFT] Zendesk", "[DRAFT] Sheets"]
+        results: [{metric: "[DRAFT] hours_saved_week", value: "25"}, {metric: "[DRAFT] csat", value: "+8%"}]
+        quote: "[DRAFT] \"We finally got ahead of the queue.\""
+      - slug: "sales-agent"
+        client: "[DRAFT] SaaS startup"
+        niche: "[DRAFT] B2B software"
+        problem: "[DRAFT] Slow research and outreach"
+        solution: "[DRAFT] Prospect briefs and first-draft emails"
+        stack: ["[DRAFT] HubSpot", "[DRAFT] Apollo"]
+        results: [{metric: "[DRAFT] reply_rate", value: "+30%"}, {metric: "[DRAFT] hours_saved_week", value: "12"}]
+        quote: "[DRAFT] \"Pipeline moved faster immediately.\""
+      - slug: "ops-reporting"
+        client: "[DRAFT] Logistics"
+        niche: "[DRAFT] Operations"
+        problem: "[DRAFT] Manual weekly reporting"
+        solution: "[DRAFT] Automated pulls, cleanup, and distribution"
+        stack: ["[DRAFT] BigQuery", "[DRAFT] Slack"]
+        results: [{metric: "[DRAFT] hours_saved_run", value: "4"}]
+        quote: "[DRAFT] \"The report sends itself.\""
+    detail_template:
+      slug: "example"
+      title: "[DRAFT] Outcome-focused automation"
+      summary: "[DRAFT] Short summary of the client and win."
+      sections:
+        - heading: "Problem"
+          bullets: ["[DRAFT] Describe the pain clearly"]
+        - heading: "Solution"
+          bullets: ["[DRAFT] Steps taken and systems involved"]
+        - heading: "Results"
+          bullets: ["[DRAFT] Numbers and outcomes"]
+  about:
+    mission: "[DRAFT] We build practical automations that compound value for growing teams."
+    principles: ["[DRAFT] Ship value weekly", "[DRAFT] Prove outcomes", "[DRAFT] Keep humans in control", "[DRAFT] Prefer simple", "[DRAFT] Document everything"]
+    team:
+      - { name: "[DRAFT] Alex Parker", role: "[DRAFT] Founder", bio: "[DRAFT] 8 years in ops and automation." }
+      - { name: "[DRAFT] Maya Chen", role: "[DRAFT] Lead Engineer", bio: "[DRAFT] Integrations and agent systems." }
+  contact:
+    form_fields: [name, email, company, size, goal, message]
+    validation: { name: required, email: "required|email", message: "required|min:20" }
+    success_message: "[DRAFT] Thanks! We’ll reply within 24 hours."
+    handler: local-json
+  privacy:
+    policy_source: "[DRAFT] Provide a link or paste policy text."
+seo:
+  home: { title: "[DRAFT] Practical AI Automations", description: "[DRAFT] We automate repetitive work so teams move faster.", keywords: ["[DRAFT] ai automations", "[DRAFT] workflow automation"] }
+  features: { title: "[DRAFT] Features", description: "[DRAFT] Discovery, build, AI employees, and care.", keywords: ["[DRAFT] ai features"] }
+  pricing: { title: "[DRAFT] Pricing", description: "[DRAFT] Plans for teams starting or scaling.", keywords: ["[DRAFT] ai pricing"] }
+  case_studies: { title: "[DRAFT] Case Studies", description: "[DRAFT] Real outcomes with clear numbers.", keywords: ["[DRAFT] ai outcomes"] }
+  about: { title: "[DRAFT] About", description: "[DRAFT] Our mission, principles, and team.", keywords: ["[DRAFT] about"] }
+  contact: { title: "[DRAFT] Contact", description: "[DRAFT] Book a free AI audit.", keywords: ["[DRAFT] contact"] }
+  privacy: { title: "[DRAFT] Privacy", description: "[DRAFT] How we handle data.", keywords: ["[DRAFT] privacy"] }

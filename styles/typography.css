@@ -1,0 +1,135 @@
+/* Typography System */
+:root {
+  --font-family-primary: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-family-heading: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-primary { font-family: var(--font-family-primary); }
+.font-heading { font-family: var(--font-family-heading); }
+.font-body { font-family: var(--font-family-body); }
+
+/* Typography Utilities */
+.text-display {
+  font-size: clamp(2.75rem, 3.5vw, 4rem); /* ~44–64px */
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-family: var(--font-family-primary);
+}
+
+.text-h1 {
+  font-size: clamp(2.25rem, 3vw, 3rem); /* ~36–48px */
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-family: var(--font-family-primary);
+}
+
+.text-h2 {
+  font-size: clamp(1.75rem, 2.2vw, 2.5rem); /* ~28–40px */
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  font-family: var(--font-family-primary);
+}
+
+.text-h3 {
+  font-size: clamp(1.375rem, 1.6vw, 2rem); /* ~22–32px */
+  line-height: 1.4;
+  font-weight: 600;
+  font-family: var(--font-family-primary);
+}
+
+.text-body {
+  font-size: 1rem; /* 16px */
+  line-height: 1.7; /* 27px */
+  font-weight: 400;
+  font-family: var(--font-family-primary);
+}
+
+.text-body-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75; /* 31px */
+  font-weight: 400;
+  font-family: var(--font-family-primary);
+}
+
+.text-small {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5; /* 21px */
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  font-family: var(--font-family-primary);
+}
+
+/* Utility Classes */
+.font-display {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.font-heading {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.font-body {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-base-ink);
+}
+
+.text-secondary {
+  color: var(--color-base-gray);
+}
+
+.text-muted {
+  color: var(--color-base-gray-mid);
+}
+
+.text-accent {
+  color: var(--color-primary-lime);
+}
+
+.text-accent-orange {
+  color: var(--color-accent-orange);
+}
+
+/* Link Styles */
+.link {
+  color: var(--color-accent-orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-thickness var(--duration-normal) var(--easing-smooth);
+}
+
+.link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-primary-lime);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

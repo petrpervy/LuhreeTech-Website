@@ -1,0 +1,7 @@
+[
+  { "tier": "Starter", "price": "$2k/mo", "features": ["2 automations", "Email support", "Quick wins first"] },
+  { "tier": "Growth", "price": "$5k/mo", "features": ["5+ automations", "Agent upkeep", "Weekly improvements"] },
+  { "tier": "Custom", "price": "Let's talk", "features": ["Deeper systems", "On-site workshops", "SLA"] }
+]
+
+
