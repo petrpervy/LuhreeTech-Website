@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Minimal config for Vercel
+  outputFileTracingRoot: __dirname,
 };
 
 module.exports = nextConfig;
