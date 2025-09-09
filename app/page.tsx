@@ -1,1 +1,1 @@
-export default function Home() { return <div>SUCCESS!</div> }
+export default function Page(){return <main style={{padding:32}}>Home OK</main>}
