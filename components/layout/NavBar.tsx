@@ -21,7 +21,7 @@ export default function NavBar() {
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-ink">
+          <Link href="/" className="text-xl font-bold text-brand-ink">
             Luhreetech
           </Link>
 
@@ -31,7 +31,7 @@ export default function NavBar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-muted hover:text-ink transition-colors duration-200"
+                className="text-brand-gray hover:text-brand-ink transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -69,7 +69,7 @@ export default function NavBar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-muted hover:text-ink transition-colors duration-200"
+                  className="text-brand-gray hover:text-brand-ink transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

@@ -11,7 +11,7 @@ export default function Home() {
       <section className="hero-section">
         <div className="container">
           <div className="text-center animate-fade-in-up">
-            <h1 className="heading-xl mb-6 text-ink">
+            <h1 className="heading-xl mb-6 text-brand-ink">
               AI automations done for you, end-to-end.
             </h1>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="section-padding bg-gradient-to-br from-gradient-lavender/20 to-gradient-teal/20">
+      <section className="section-padding bg-brand-light">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="heading-lg mb-4">What our clients say</h2>
